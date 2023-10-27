@@ -1,20 +1,16 @@
-import { Button, StyleSheet, Text, TextInput, View } from "react-native";
+import { styled } from "nativewind";
+import { Button, Text, TextInput, View } from "react-native";
 
-function CreateList() {
+const StyledView = styled(View)
+
+function CreateList(props) {
     return(
-        <View style={styles.container}>
-            <Text>Create List</Text>
-            <TextInput placeholder="Coloque o nome da sua lista"></TextInput>
-            <Button title="create your list" onPress={() => {}}></Button>
-        </View>
+        <StyledView className="flex-1 justify-center items-center dark: bg-gray-900">
+            <Text className="dark: text-white">Create List</Text>
+            <TextInput className="dark: text-white" placeholder="Coloque o nome da sua lista"></TextInput>
+            <Button title="Create your list" onPress={() => { }}></Button>
+        </StyledView>
     )
 }
-const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-    }
-})
 
 export default CreateList

@@ -3,9 +3,8 @@ import { View, Text, Button } from 'react-native';
 
 function HomeScreen({navigation}) {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen</Text>
-         <Button title="Go to List" onPress={ () => navigation.navigate('List')}></Button>
+      <View className="flex-1 items-center justify-center  dark: bg-gray-900">
+        <Text className="dark: text-white">Home Screen</Text>
       </View>
     );
   }
