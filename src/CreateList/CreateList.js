@@ -18,7 +18,7 @@ function CreateList({ navigation }) {
     }
 
     const saveList = async () => {
-        var saveList = await getList() || "";
+        var saveList = await getList() || new Array();
         saveList.push(name) 
         await AsyncStorage.setItem(metadata.LIST.LISTNAME, JSON.stringify(saveList))
     }
